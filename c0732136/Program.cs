@@ -36,18 +36,16 @@ namespace Assignment
 
 
 
+
     class JournalEntry
 
     {
-
         public JournalEntry(string note, int dist)
 
         {
-
             villageName = note; distanceTraveled = dist;
 
             HowFarToGetBack = distanceTraveled;
-
         }
 
         public int HowFarToGetBack = 0;
@@ -61,7 +59,6 @@ namespace Assignment
         public string getVillageName() { return villageName; }
 
     }
-
 
 
     class Hugi
@@ -198,7 +195,7 @@ namespace Assignment
 
 
 
-                // Here Hugi records his travels, as any Norse Hero will do:
+               
 
                 Hugi.HugiJournal.Add(new JournalEntry(CurrentVillage.VillageName, CurrentVillage.distanceFromPreviousVillage));
 
@@ -224,7 +221,7 @@ namespace Assignment
 
 
 
-                // TO DO: Complete this section to make the Recursion work           
+                         
 
                 TraverseVillages(CurrentVillage.west);
 
@@ -244,7 +241,7 @@ namespace Assignment
 
         {
 
-            //tries eevery loc
+     
 
             Alst = new Village("Alst", false);
 
@@ -252,7 +249,6 @@ namespace Assignment
 
             Wessig = new Village("Wessig", false);
 
-            // TO DO: Complete this section
 
             Uster = new Village("Uster", true);
 
@@ -267,8 +263,6 @@ namespace Assignment
             Alst.VillageSetup(0, Schvenig, Wessig);
 
             Schvenig.VillageSetup(14, Maeland, Helmholtz);
-
-            // TO DO: Complete this section
 
             Wessig.VillageSetup(19, Uster, Badden);
 
@@ -290,56 +284,7 @@ namespace Assignment
 
 
 
-        public void Announcement()
-
-        {
-
-            try
-
-            {
-
-                // Create an instance of StreamReader to read from a file.
-
-                // The using statement also closes the StreamReader.
-
-                using (StreamReader sr = new StreamReader("U:\\Users\\732116\\announcement.txt"))
-
-                {
-
-                    string line;
-
-
-
-                    // Read and display lines from the file until 
-
-                    // the end of the file is reached. 
-
-                    while ((line = sr.ReadLine()) != null)
-
-                    {
-
-                        Console.WriteLine(line);
-
-                    }
-
-                }
-
-            }
-
-            catch (Exception e)
-
-            {
-
-                // Let the user know what went wrong.
-
-                Console.WriteLine("The file could not be read:");
-
-                Console.WriteLine(e.Message);
-
-            }
-
-        }
-
+       
     }
 
 
